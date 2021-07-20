@@ -1,0 +1,11 @@
+@import '../node_modules/bulma/sass/utilities/initial-variables.sass';
+
+$blue: #72d0eb;
+$cyan: #251fc9;
+
+
+@import '../node_modules/bulma/sass/utilities/derived-variables.sass';
+//$primary: $cyan;
+$info: $cyan;
+
+@import '../node_modules/bulma/bulma.sass'
