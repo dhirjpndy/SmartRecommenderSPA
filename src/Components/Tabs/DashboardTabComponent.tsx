@@ -115,7 +115,9 @@ function DashboardTabComponent(props: any) {
         </div>
         <div className='column pb-0 is-7'>
           <h1 className=' is-size-5 has-text-weight-bold'>Grow Business</h1>
-          <p className='is-size-7 pl-1 mb-3 has-text-grey'>Lorem Ipsum</p>
+          <p className='is-size-7 pl-1 mb-3 has-text-grey'>
+            Boost your sales, choose growth
+          </p>
           <div
             className='box py-4'
             style={{

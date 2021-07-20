@@ -55,7 +55,7 @@ function BusinessObjective(props: any) {
               <span className='has-text-weight-bold'>Business Objectives</span>
             </p>
             <p className='is-size-6 pl-2 has-text-grey'>
-              Tag for Business Objectives...
+              Grow your business by choosing the right business goal.
             </p>
           </div>
         </div>

@@ -363,7 +363,7 @@ function RecommendationDetail(props: any) {
                       justifyContent: 'space-between',
                     }}
                   >
-                    <div>
+                    <div className='my-1 py-1'>
                       <p className='is-size-4 has-text-weight-bold  has-text-info'>
                         {selectedData.newBusinessScore.score}
                         <span className='is-size-5 has-text-black'>
@@ -372,7 +372,7 @@ function RecommendationDetail(props: any) {
                       </p>
                       <h1 className=' is-size-6'>New Business Score</h1>
                       <p className='is-size-7 pl-1 has-text-grey'>
-                        Last 30 days..{' '}
+                        {/* Last 30 days..{' '} */}
                       </p>
                     </div>
                     {/* <div style={{ alignSelf: 'center', margin: '10px' }}>
@@ -403,14 +403,14 @@ function RecommendationDetail(props: any) {
                   justifyContent: 'space-between',
                 }}
               >
-                <div className='my-2'>
+                <div className='my-4'>
                   <p className='is-size-4 has-text-weight-bold pl-2 has-text-info'>
                     {selectedData.staffUtilization}
                     <span className='is-size-6'>%</span>
                   </p>
                   <h1 className=' is-size-6 pl-2'>Staff Utilization</h1>
                   <p className='is-size-7 pl-3 has-text-grey'>
-                    Lorem Ipsum Text
+                    {/* Lorem Ipsum Text */}
                   </p>
                 </div>
                 <div>
