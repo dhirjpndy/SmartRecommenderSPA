@@ -29,14 +29,12 @@ function DashboardTabComponent(props: any) {
 
   const [businessDetail, setBusinessDetail] = useState<any | null>(null);
   useEffect(() => {
-    axios
-      .get(`${ApiUrl}/Dashboard/Studios/${props.studioId}/ClassDetail`)
-      .then((res) => {
-        const persons = res.data;
-        console.log(persons);
-        setBusinessDetail(persons);
-        staffText = persons.staffUtilizaton;
-      });
+    axios.get(`${ApiUrl}/Dashboard/Studios/111/ClassDetail`).then((res) => {
+      const persons = res.data;
+      console.log(persons);
+      setBusinessDetail(persons);
+      staffText = persons.staffUtilizaton;
+    });
   }, []);
   let i = 0;
 

@@ -18,32 +18,6 @@ export const App = () => {
 
   const [selectLocation, setSelectLocation] = useState<null | any>(null);
 
-  useEffect(() => {
-    axios.get(`https://localhost:5001/v1/Dashboard/Studios`).then((res) => {
-      const persons = res.data;
-      setStudios(persons.slice(10, 20));
-      // console.log(persons);
-    });
-  }, []);
-
-  useEffect(() => {
-    if (selectValue !== '0' && studios !== null) {
-      console.log(selectValue);
-
-      var index = studios.findIndex(
-        (x: any) => x.businessId.toString() === selectValue
-      );
-
-      setSelectLocation({
-        id: studios[index].businessId,
-        name: studios[index].businessName,
-        city: studios[index].city,
-        state: studios[index].state,
-        country: studios[index].country,
-      });
-    }
-  }, [selectValue]);
-
   const onHomeSubmit = () => {
     setIsHome(false);
     setIsDash(true);
@@ -51,15 +25,15 @@ export const App = () => {
 
   return (
     <>
-      {isHome && studios ? (
+      {isHome ? (
         <HomeComponent
           data={studios}
-          selectValue={selectValue}
+          //selectValue={selectValue}
           onSubmit={onHomeSubmit}
-          handleChange={setSelectValue}
+          // handleChange={setSelectValue}
         />
       ) : isDash ? (
-        <LandingComponent selectedStudio={selectValue} />
+        <LandingComponent />
       ) : (
         //   <p className='is-medium'>Loading...</p>
         <LoaderComponent />

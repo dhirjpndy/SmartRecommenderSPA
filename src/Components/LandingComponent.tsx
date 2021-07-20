@@ -48,10 +48,7 @@ function LandingComponent(props: any) {
         >
           <div className='block'>
             {isDash ? (
-              <DashboardTabComponent
-                studioId={props.selectedStudio}
-                setDash={setIsDash}
-              />
+              <DashboardTabComponent setDash={setIsDash} />
             ) : (
               <RecommendationDetail
                 showCS={isCS}
