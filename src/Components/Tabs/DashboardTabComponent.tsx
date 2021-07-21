@@ -361,7 +361,7 @@ function DashboardTabComponent(props: any) {
                     thousandSeparator={true}
                     prefix={'$'}
                   />
-                  <CaretDownOutlined size={1} style={{ height: '20px' }} />
+                  <CaretDownOutlined style={{ height: '20px' }} />
                 </span>
               </p>
               <h1 className=' is-size-6 has-text-weight-semibold pt-3'>
@@ -372,7 +372,7 @@ function DashboardTabComponent(props: any) {
               </p>
             </div>
             <div style={{ alignSelf: 'center' }}>
-              <img src='group2.png' height='100px' width='100px' />
+              <img src='https://hackathonspa.s3.ap-south-1.amazonaws.com/Group2.png' height='100px' width='100px' />
             </div>
           </div>
           <div className='box'>

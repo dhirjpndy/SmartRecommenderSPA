@@ -22,7 +22,7 @@ function ClassSchedule(props: any) {
   return show ? (
     <>
       <Confetti
-        style={{ position: 'relative', marginLeft: '8%', height: '430px' }}
+        style={{ position: 'relative', marginLeft: '8%', height: '480px' }}
       />
       <p
         className='is-size-3 is-family-sans-serif has-text-weight-semibold'

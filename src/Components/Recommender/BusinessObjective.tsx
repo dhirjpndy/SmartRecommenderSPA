@@ -46,7 +46,7 @@ function BusinessObjective(props: any) {
         <div>
           <img
             style={{ margin: '10px 40%' }}
-            src='image302x.png'
+            src='https://hackathonspa.s3.ap-south-1.amazonaws.com/Image302x.png'
             height='150px'
             width='150px'
           />

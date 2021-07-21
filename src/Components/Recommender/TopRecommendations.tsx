@@ -148,7 +148,8 @@ function TopRecommendations(props: any) {
                 x.key === isSelected ? '' : 'has-text-success'
               }`}
             >
-              <CaretUpOutlined />${x.revenue}
+              <CaretUpOutlined /> <span style={{ color: 'black' }}>~</span> $
+              {x.revenue}
             </span>
           </p>
         </div>
