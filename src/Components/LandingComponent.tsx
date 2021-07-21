@@ -14,10 +14,15 @@ function LandingComponent(props: any) {
         <div className='block my-2'>
           <nav className='navbar' style={{ zIndex: 0 }}>
             <div className='navbar-brand'>
-              <a className='navbar-item py-0' href=''>
-                <img src='logo3.png' width='35' height='70' />
+              <a className='navbar-item py-0 px-1' href=''>
+                <img
+                  src='logo3.png'
+                  width='40'
+                  height='40'
+                  style={{ maxHeight: 'none' }}
+                />
               </a>
-              <p className='content py-0 is-medium mt-2 mb-0 has-text-weight-semibold'>
+              <p className='content py-0 is-medium mt-2 pt-1 mb-0 has-text-weight-semibold'>
                 Smart Recommender
               </p>
             </div>

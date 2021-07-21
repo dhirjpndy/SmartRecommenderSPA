@@ -1,2 +1,10 @@
 @charset "utf-8";
 @import "../node_modules/bulma/bulma.sass";
+
+.buttonHover {
+    :hover {
+        color: white;
+        border-color: #251fc9;
+        background-color: #251fc9;
+    }
+}

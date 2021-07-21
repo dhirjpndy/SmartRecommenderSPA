@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import TopRecommendations from './TopRecommendations';
+import { ArrowRightOutlined } from '@ant-design/icons';
 
 function BusinessObjective(props: any) {
   const [isActive, setIsActive] = useState('');
@@ -29,13 +30,13 @@ function BusinessObjective(props: any) {
   const boItems = bolist.map((x) => (
     <a
       key={x.key}
-      className={`button is-info is-outlined mx-3 my-2 is-rounded is-small ${
+      className={`button mx-2 my-2 is-rounded is-small ${
         x.active ? 'is-hovered' : ''
       }`}
       onClick={() => changeHover(x.name)}
       style={{ width: '130px' }}
     >
-      <p className='has-text-weight-semibold'> {x.name}</p>
+      <p className=''> {x.name}</p>
     </a>
   ));
   return (
@@ -55,22 +56,25 @@ function BusinessObjective(props: any) {
               <span className='has-text-weight-bold'>Business Objectives</span>
             </p>
             <p className='is-size-6 pl-2 has-text-grey'>
-              Grow your business by choosing the right business goal.
+              Grow your business by choosing the right business goal
             </p>
           </div>
         </div>
         <div
           className='block my-5'
-          style={{ marginLeft: '12%', marginRight: '5%' }}
+          style={{ marginLeft: '8%', marginRight: '5%' }}
         >
           {boItems}
         </div>
         <button
           onClick={() => setIsActive('is-active')}
-          className='button has-text-weight-semibold is-small is-info'
-          style={{ margin: '2% 0 0 38%' }}
+          className='button has-text-weight-medium is-small is-info'
+          style={{ margin: '3% 0 2% 32%' }}
         >
           Show Recommendations
+          <ArrowRightOutlined
+            style={{ paddingLeft: '8px', paddingRight: '0px' }}
+          />
         </button>
       </section>
       <TopRecommendations

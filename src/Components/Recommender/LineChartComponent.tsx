@@ -47,13 +47,11 @@ function LineChartComponent() {
           tick={{ strokeWidth: 0.5 }}
           unit='$'
           type='number'
-          tickCount={70}
-          //  minTickGap={10}
-
+          tickCount={4}
+          minTickGap={10}
           dataKey='revenue'
         />
         <Tooltip separator=': $' />
-        <Legend />
         <Line
           type='monotone'
           dot={false}

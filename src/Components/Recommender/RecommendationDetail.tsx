@@ -4,6 +4,7 @@ import LineChartComponent from './LineChartComponent';
 import { Badge } from 'antd';
 import GaugeChart from 'react-gauge-chart';
 import { Progress } from 'antd';
+import { Avatar, Image } from 'antd';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSquare } from '@fortawesome/free-solid-svg-icons';
@@ -142,7 +143,7 @@ function RecommendationDetail(props: any) {
   const weekDays = bolist.map((x) => (
     <a
       key={x.key}
-      className={`button is-info is-outlined my-1 is-small is-rounded has-text-weight-semibold  ${
+      className={`button my-1 mr-2 is-small is-rounded has-text-weight-semibold  ${
         x.active ? 'is-hovered' : ''
       }`}
       onClick={() => changeHover(x.key)}
@@ -156,7 +157,7 @@ function RecommendationDetail(props: any) {
     classCategories.map((x: any, i: any) => (
       <a
         onClick={() => ChangeRecommendation(i)}
-        className={`button is-info is-outlined m-1 is-small is-rounded pr-2  has-text-weight-semibold  ${
+        className={`button  my-1 mr-2 is-small is-rounded pr-2  has-text-weight-semibold  ${
           i === categorySelected ? 'is-hovered' : ''
         }`}
       >
@@ -167,7 +168,7 @@ function RecommendationDetail(props: any) {
           style={{
             marginLeft: '12px',
             marginRight: '-2px',
-            background: 'yellow',
+            background: '#F7D902',
             color: 'black',
           }}
         ></Badge>
@@ -176,7 +177,7 @@ function RecommendationDetail(props: any) {
   const slots = timeSlots.map((x) => (
     <a
       onClick={() => setTimeSelected(x)}
-      className={`button is-info is-outlined m-1 is-small is-rounded  has-text-weight-semibold ${
+      className={`button my-1 mr-2 is-small is-rounded  has-text-weight-semibold ${
         x === timeSelected ? 'is-hovered' : ''
       }`}
     >
@@ -186,7 +187,7 @@ function RecommendationDetail(props: any) {
   const capacity = classCapacity.map((x) => (
     <a
       onClick={() => setCapacitySelected(x)}
-      className={`button is-info is-outlined m-1 is-small is-rounded  has-text-weight-semibold ${
+      className={`button my-1 mr-2 is-small is-rounded  has-text-weight-semibold ${
         x === capacitySelected ? 'is-hovered' : ''
       }`}
     >
@@ -196,7 +197,7 @@ function RecommendationDetail(props: any) {
   const schedule = scheduleForNext.map((x) => (
     <a
       onClick={() => setScheduleSelected(x)}
-      className={`button is-info is-outlined m-1 is-small is-rounded  has-text-weight-semibold ${
+      className={`button  my-1 mr-2 is-small is-rounded  has-text-weight-semibold ${
         x === scheduleSelected ? 'is-hovered' : ''
       }`}
     >
@@ -206,17 +207,27 @@ function RecommendationDetail(props: any) {
   const staffList = staff.map((x) => (
     <a
       onClick={() => setStaffSelected(x)}
-      className={`button is-info is-outlined m-1 is-small is-rounded has-text-weight-semibold  ${
+      className={`button  my-1 mr-2 is-small is-rounded has-text-weight-semibold  ${
         x === staffSelected ? 'is-hovered' : ''
       }`}
     >
+      {/* <div>
+        <Avatar
+          src={
+            <Image
+              src={'Mask2.png'}
+              style={{ paddingRight: '4px', height: '17px', width: '25px' }}
+            />
+          }
+        />
+      </div> */}
       {x}
     </a>
   ));
   const OffersList = offers.map((x) => (
     <a
       onClick={() => setOfferSelected(x)}
-      className={`button is-info is-outlined my-1 px-3 mr-1 is-small is-rounded has-text-weight-semibold  ${
+      className={`button  my-1 mr-2 px-3 is-small is-rounded has-text-weight-semibold  ${
         x === offerSelected ? 'is-hovered' : ''
       }`}
     >
@@ -243,9 +254,12 @@ function RecommendationDetail(props: any) {
 
         <div className='columns my-1'>
           <div className='column is-5 pr-0'>
-            <div className='box'>
+            <div className='box pr-2'>
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <h1 className=' is-size-6 has-text-weight-medium'>
+                <h1
+                  className=' is-size-6 has-text-weight-medium'
+                  style={{ fontFamily: 'averta_bold', letterSpacing: '-1px' }}
+                >
                   Class Recommendation
                 </h1>
 
@@ -258,44 +272,44 @@ function RecommendationDetail(props: any) {
                 </p>
               </div>
 
-              <div className='section p-2'>
+              <div className='section py-2 px-0'>
                 <p className='has-text-black is-size-7 has-text-weight-semibold '>
                   Class Category
                 </p>
                 <div className='block'>{categories}</div>
               </div>
-              <div className='section p-2'>
+              <div className='section py-2 px-0'>
                 <p className='has-text-black is-size-7 has-text-weight-semibold '>
                   Time Slot
                 </p>
                 <div className='block'>{slots}</div>
               </div>
-              <div className='section p-2'>
+              <div className='section py-2 px-0'>
                 <p className='has-text-black is-size-7 has-text-weight-semibold '>
                   Days in week
                 </p>
                 <div className='block'>{weekDays}</div>
               </div>
-              <div className='section p-2'>
+              <div className='section py-2 px-0'>
                 <p className='has-text-black is-size-7 has-text-weight-semibold '>
                   Class Capacity
                 </p>
                 <div className='block'>{capacity}</div>
               </div>
-              <div className='section p-2'>
+              <div className='section py-2 px-0'>
                 <p className='has-text-black is-size-7 has-text-weight-semibold '>
                   Schedule for next
                 </p>
                 <div className='block'>{schedule}</div>
               </div>
-              <div className='section p-2'>
+              <div className='section py-2 px-0'>
                 <p className='has-text-black is-size-7 has-text-weight-semibold '>
                   Staff
                 </p>
                 <div className='block'>{staffList}</div>
               </div>
 
-              <div className='section p-2'>
+              <div className='section py-2 px-0'>
                 <p className='has-text-black is-size-7 has-text-weight-semibold '>
                   Offers
                 </p>
@@ -303,9 +317,11 @@ function RecommendationDetail(props: any) {
               </div>
             </div>
           </div>
-
-          <div className='column is-7'>
-            <h1 className=' is-size-5 mb-2 ml-2 has-text-weight-medium'>
+          <div className='column is-7 pl-0 pr-0'>
+            <h1
+              className=' is-size-5 mb-2 ml-2 has-text-weight-medium pl-2'
+              style={{ fontFamily: 'averta_bold', letterSpacing: '-1px' }}
+            >
               Business Impact
             </h1>
 
@@ -315,12 +331,17 @@ function RecommendationDetail(props: any) {
                 style={{ height: '190px', display: 'flex' }}
               >
                 <div style={{ width: '200px' }}>
-                  <p className='is-size-4 has-text-weight-bold mt-4 has-text-info'>
+                  <p
+                    style={{ fontSize: '25px' }}
+                    className=' has-text-weight-bold mt-4 has-text-info'
+                  >
                     ${selectedData.revenue}
                     <span className='is-size-6 '></span>
                   </p>
-                  <h1 className=' is-size-6 pl-0'>Revenue</h1>
-                  <p className='is-size-7 pl-1 has-text-grey'>
+                  <h1 className=' is-size-6 pl-0 has-text-weight-semibold'>
+                    Revenue
+                  </h1>
+                  <p className='is-size-7  has-text-grey'>
                     Increase in revenue per class
                   </p>
                 </div>
@@ -329,7 +350,7 @@ function RecommendationDetail(props: any) {
                 </div>
               </div>
               <div style={{ display: 'flex' }}>
-                <div className='column is-5 pl-0 pr-1'>
+                <div className='column is-5 pl-0 pr-1 py-3'>
                   <div className='box'>
                     <div
                       style={{
@@ -338,19 +359,21 @@ function RecommendationDetail(props: any) {
                       }}
                     >
                       <div>
-                        <p className='is-size-5'>
-                          <span className='is-size-4 pl-2 has-text-weight-bold  has-text-info'>
+                        <p style={{ fontSize: '25px' }}>
+                          <span className='is-size-4 has-text-weight-bold  has-text-info'>
                             {selectedData.newLeads}
                           </span>
                         </p>
-                        <h1 className=' is-size-6 pl-2'>Leads</h1>
+                        <h1 className=' is-size-6  pb-0 has-text-weight-semibold'>
+                          Leads
+                        </h1>
                       </div>
                       <div style={{ alignSelf: 'center', margin: '5px' }}>
                         <img src='icon2.png' height='50px' width='50px' />
                       </div>
                     </div>
 
-                    <p className='is-size-7 pl-2 has-text-grey'>
+                    <p className='is-size-7  has-text-grey'>
                       New leads added for every class
                     </p>
                   </div>
@@ -364,13 +387,18 @@ function RecommendationDetail(props: any) {
                     }}
                   >
                     <div className='my-1 py-1'>
-                      <p className='is-size-4 has-text-weight-bold  has-text-info'>
+                      <p
+                        style={{ fontSize: '25px' }}
+                        className=' has-text-weight-bold  has-text-info'
+                      >
                         {selectedData.newBusinessScore.score}
-                        <span className='is-size-5 has-text-black'>
+                        <span className='is-size-6 has-text-black'>
                           /{selectedData.newBusinessScore.totalBusiness}
                         </span>
                       </p>
-                      <h1 className=' is-size-6'>New Business Score</h1>
+                      <h1 className=' is-size-6 has-text-weight-semibold'>
+                        New Business Score
+                      </h1>
                       <p className='is-size-7 pl-1 has-text-grey'>
                         {/* Last 30 days..{' '} */}
                       </p>
@@ -404,11 +432,16 @@ function RecommendationDetail(props: any) {
                 }}
               >
                 <div className='my-4'>
-                  <p className='is-size-4 has-text-weight-bold pl-2 has-text-info'>
+                  <p
+                    style={{ fontSize: '25px' }}
+                    className='has-text-weight-bold  has-text-info'
+                  >
                     {selectedData.staffUtilization}
                     <span className='is-size-6'>%</span>
                   </p>
-                  <h1 className=' is-size-6 pl-2'>Staff Utilization</h1>
+                  <h1 className=' is-size-6 has-text-weight-semibold'>
+                    Staff Utilization
+                  </h1>
                   <p className='is-size-7 pl-3 has-text-grey'>
                     {/* Lorem Ipsum Text */}
                   </p>
@@ -445,7 +478,7 @@ function RecommendationDetail(props: any) {
                   />
                   <p className=' is-size-7 ml-5 mt-1 has-text-left has-text-weight-semibold '>
                     Increase in{' '}
-                    <span className='is-size-6 has-text-success'>
+                    <span className='is-size-6' style={{ color: '#07B700' }}>
                       {' '}
                       {selectedStaffUtiNew}
                       {'% '}
@@ -454,7 +487,7 @@ function RecommendationDetail(props: any) {
                   </p>
                 </div>
                 <div className='my-4 mr-4'>
-                  <p>
+                  <p style={{ fontSize: '14px' }}>
                     <FontAwesomeIcon
                       icon={faSquare}
                       size='1x'
@@ -466,7 +499,7 @@ function RecommendationDetail(props: any) {
                     />
                     Previous
                   </p>
-                  <p>
+                  <p style={{ fontSize: '14px' }}>
                     {' '}
                     <FontAwesomeIcon
                       icon={faSquare}
@@ -507,7 +540,7 @@ function RecommendationDetail(props: any) {
         </button>
         <button
           onClick={() => props.setShowCS(true)}
-          className='button is-info has-text-weight-semibold'
+          className='button is-info has-text-weight-medium'
           style={{ margin: '15px 8% 5px 0' }}
         >
           Schedule this Class

@@ -1,11 +1,39 @@
+.click {
+    color: #251fc9;
+}
+
+.click:hover {
+    color: white !important;
+    border-color: #251fc9 !important;
+    background-color: #251fc9 !important;
+}
+
+.clickHover {
+    color: white !important;
+    border-color: #251fc9 !important;
+    background-color: #251fc9 !important;
+}
+
+.badgedefault {
+    margin-top: -5px !important;
+    margin-left: -15px;
+    background: blue;
+    color: black;
+}
+
 @import '../node_modules/bulma/sass/utilities/initial-variables.sass';
 
 $blue: #72d0eb;
 $cyan: #251fc9;
-
+$red:#FF2424;
 
 @import '../node_modules/bulma/sass/utilities/derived-variables.sass';
 //$primary: $cyan;
 $info: $cyan;
+$button-hover-border-color:$cyan;
+$button-hover-color:$cyan;
+$danger: $red;
+
+//$family-primary: 'var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) 21px/26px var(--unnamed-font-family-averta)';
 
 @import '../node_modules/bulma/bulma.sass'

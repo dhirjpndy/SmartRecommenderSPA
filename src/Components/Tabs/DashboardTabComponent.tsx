@@ -70,20 +70,28 @@ function DashboardTabComponent(props: any) {
   return businessDetail ? (
     <div className='block'>
       <div className='columns'>
-        <div className='column pb-0 is-5'>
-          <h1 className=' is-size-5 has-text-weight-bold'>Business Metrics</h1>
+        <div className='column pb-0 is-6'>
+          <h1
+            className=' is-size-5'
+            style={{ fontFamily: 'averta_bold', letterSpacing: '-1px' }}
+          >
+            Business Metrics
+          </h1>
           <p className='is-size-7 pl-1 mb-3 has-text-grey'>Last 30 days </p>
           <div
-            className='box pt-2'
+            className='box py-3'
             style={{
-              //   height: '125px',
+              //   height: '128px',
               display: 'flex',
               justifyContent: 'space-between',
             }}
           >
-            <div>
-              <p className='is-size-6'>
-                <span className='is-size-4 has-text-info has-text-weight-bold'>
+            <div className='py-0'>
+              <p className='is-size-6 has-text-weight-semibold'>
+                <span
+                  className=' has-text-info has-text-weight-bold'
+                  style={{ fontSize: '28px' }}
+                >
                   {businessDetail.businessScore.score}
                 </span>
                 / {businessDetail.businessScore.totalBusiness}
@@ -91,7 +99,7 @@ function DashboardTabComponent(props: any) {
               <h1 className=' is-size-6 has-text-weight-semibold'>
                 My Business Score
               </h1>
-              <p className='is-size-7 pl-1 has-text-grey'>
+              <p className='is-size-7 has-text-grey '>
                 How did we get this score?{' '}
               </p>
             </div>
@@ -113,40 +121,40 @@ function DashboardTabComponent(props: any) {
             </div>
           </div>
         </div>
-        <div className='column pb-0 is-7'>
-          <h1 className=' is-size-5 has-text-weight-bold'>Grow Business</h1>
+        <div className='column pb-0 is-6 pl-0'>
+          <h1
+            className=' is-size-5'
+            style={{ fontFamily: 'averta_bold', letterSpacing: '-1px' }}
+          >
+            Grow your Business
+          </h1>
           <p className='is-size-7 pl-1 mb-3 has-text-grey'>
             Boost your sales, choose growth
           </p>
           <div
-            className='box py-4'
+            className='box pt-4 pb-5'
             style={{
-              height: '105px',
+              height: '108px',
               display: 'flex',
               justifyContent: 'space-between',
               background: `transparent linear-gradient(15deg, ${PrimaryColorLocal} 0%, #00E4FF 100%) 0% 0% no-repeat padding-box`,
             }}
           >
             <div>
-              <p className='is-size-5 pl-2'>
+              <p className='is-size-5 pl-2 ' style={{ marginTop: '7px' }}>
                 <span className='is-size-5 has-text-weight-semibold has-text-white'>
                   Try Recommender
                 </span>
               </p>
-              <p className='is-size-7 pl-3 has-text-white mt-1'>
+              <p className='is-size-7 pl-2 has-text-white mt-1'>
                 Enabling Businesses with AI based Class Recommendations
                 <br />
-                {/* Text about why one should use recommender. */}
               </p>
 
-              {/* <CaretDownOutlined
-                  height='20px'
-                 
-                /> */}
               <FontAwesomeIcon
                 icon={faCaretDown}
                 size='2x'
-                style={{ marginTop: '6px', color: PrimaryColorLocal }}
+                style={{ marginTop: '19px', color: PrimaryColorLocal }}
               />
             </div>
             <div style={{ alignSelf: 'center', margin: '10px' }}>
@@ -156,7 +164,7 @@ function DashboardTabComponent(props: any) {
         </div>
       </div>
       <div className='columns'>
-        <div className='column pt-0 is-5'>
+        <div className='column pt-0 is-6'>
           <div>
             <div style={{ display: 'flex' }}>
               <div className='column is-6 pl-0 pb-0 pr-1'>
@@ -175,20 +183,23 @@ function DashboardTabComponent(props: any) {
                         width: 'inherit',
                       }}
                     >
-                      <p className='is-size-4 has-text-weight-bold pl-1'>
+                      <p
+                        className=' has-text-weight-bold'
+                        style={{ fontSize: '28px' }}
+                      >
                         {businessDetail.totalClasses}
                       </p>
                       <img
-                        style={{ margin: '-5px 4px 0px 0' }}
+                        //  style={{ margin: '-5px 4px 0px 0' }}
                         src='icon3.png'
-                        height='40px'
-                        width='40px'
+                        height='56px'
+                        width='57px'
                       />
                     </div>
                     <h1 className=' is-size-6 has-text-weight-semibold'>
                       Total Classes
                     </h1>
-                    <p className='is-size-7 pl-1 has-text-grey'>
+                    <p className='is-size-7 has-text-grey'>
                       Total count of classes offered
                     </p>
                   </div>
@@ -210,22 +221,25 @@ function DashboardTabComponent(props: any) {
                         width: 'inherit',
                       }}
                     >
-                      <p className='is-size-5 pl-1'>
-                        <span className='is-size-4 has-text-weight-bold'>
+                      <p className='is-size-5'>
+                        <span
+                          className=' has-text-weight-bold'
+                          style={{ fontSize: '28px' }}
+                        >
                           {businessDetail.totalLowPerformingClasses}
                         </span>
                       </p>
                       <img
-                        style={{ margin: '-5px 4px 0 0' }}
+                        //  style={{ margin: '-5px 4px 0 0' }}
                         src='icon1.png'
-                        height='40px'
-                        width='40px'
+                        height='56px'
+                        width='57px'
                       />
                     </div>
                     <h1 className=' is-size-6 has-text-weight-semibold'>
                       Low Performing Classes
                     </h1>
-                    <p className='is-size-7 pl-1 has-text-grey'>
+                    <p className='is-size-7 has-text-grey'>
                       Classes with high empty slots
                     </p>
                   </div>
@@ -249,8 +263,11 @@ function DashboardTabComponent(props: any) {
                         width: 'inherit',
                       }}
                     >
-                      <p className='is-size-6 has-text-weight-medium pl-1 '>
-                        <span className='is-size-4 has-text-weight-bold'>
+                      <p className='is-size-6 has-text-weight-semibold '>
+                        <span
+                          className=' has-text-weight-semibold'
+                          style={{ fontSize: '28px' }}
+                        >
                           {businessDetail.totalEmptySlots}
                         </span>
                         /4000
@@ -259,16 +276,16 @@ function DashboardTabComponent(props: any) {
                       </p>
 
                       <img
-                        style={{ margin: '-5px 4px 0 0' }}
+                        //  style={{ margin: '-5px 4px 0 0' }}
                         src='icon2.png'
-                        height='40px'
-                        width='40px'
+                        height='56px'
+                        width='57px'
                       />
                     </div>
                     <h1 className=' is-size-6 has-text-weight-semibold'>
                       Empty Slots
                     </h1>
-                    <p className='is-size-7 pl-1 has-text-grey'>
+                    <p className='is-size-7 has-text-grey'>
                       Total empty slots vs Total slots
                     </p>
                   </div>
@@ -276,9 +293,9 @@ function DashboardTabComponent(props: any) {
               </div>
               <div className='column is-6 pr-0 pb-0 pl-1'>
                 <div
-                  className='box'
+                  className='box py-5 pl-6'
                   style={{
-                    //   height: '125px',
+                    //   height: '128px',
                     display: 'flex',
                     justifyContent: 'space-between',
                   }}
@@ -306,13 +323,13 @@ function DashboardTabComponent(props: any) {
                       arcsLength={[0.55, 0.45]}
                     />
                     <p
-                      className='is-size-6 has-text-weight-bold pl-5'
+                      className='is-size-6 has-text-weight-bold mt-1 pl-5'
                       style={{ textAlign: 'center' }}
                     >
                       {businessDetail.staffUtilizaton}
                       <span className='is-size-7 has-text-weight-bold'>%</span>
                     </p>
-                    <h1 className=' is-size-6 ml-5 pl-2 mt-0 has-text-weight-semibold'>
+                    <h1 className=' is-size-6 ml-5 pl-2 mt-2 has-text-weight-semibold'>
                       Staff Utilization
                     </h1>
                   </div>
@@ -321,15 +338,22 @@ function DashboardTabComponent(props: any) {
             </div>
           </div>
           <div
-            className='box mt-3 mb-3 pt-3 pb-2'
+            className='box mt-3 mb-3 py-4 pb-4'
             style={{
               display: 'flex',
               justifyContent: 'space-between',
             }}
           >
             <div>
-              <p className='is-size-5 pl-1'>
-                <span className='is-size-4 has-text-weight-bold has-text-danger'>
+              <p className='is-size-5 '>
+                <span
+                  className=' has-text-danger'
+                  style={{
+                    fontFamily: 'averta_bold',
+                    fontSize: '28px',
+                    letterSpacing: '-1px',
+                  }}
+                >
                   {/* -${-businessDetail.totalLossOfRevenue} */}
                   <NumberFormat
                     value={businessDetail.totalLossOfRevenue}
@@ -337,13 +361,13 @@ function DashboardTabComponent(props: any) {
                     thousandSeparator={true}
                     prefix={'$'}
                   />
-                  <CaretDownOutlined />
+                  <CaretDownOutlined size={1} style={{ height: '20px' }} />
                 </span>
               </p>
-              <h1 className=' is-size-6 has-text-weight-semibold'>
+              <h1 className=' is-size-6 has-text-weight-semibold pt-3'>
                 Total Loss of Revenue
               </h1>
-              <p className='is-size-7 pl-1 has-text-grey'>
+              <p className='is-size-7 mb-1  has-text-grey'>
                 How did we calculate the revenue loss?
               </p>
             </div>
@@ -352,7 +376,10 @@ function DashboardTabComponent(props: any) {
             </div>
           </div>
           <div className='box'>
-            <p className='content is-size-6 mb-0 has-text-weight-bold'>
+            <p
+              className='content is-size-6 mb-0'
+              style={{ fontFamily: 'averta_bold', letterSpacing: '-1px' }}
+            >
               My Staff{' '}
               <span className='has-text-grey is-size-7'>
                 {' '}
@@ -380,7 +407,7 @@ function DashboardTabComponent(props: any) {
             </table>
           </div>
         </div>
-        <div className='column pb-0 is-7'>
+        <div className='column pb-0 is-6 pl-0'>
           <div className='box'>
             <BusinessObjective setDash={props.setDash} />
           </div>
