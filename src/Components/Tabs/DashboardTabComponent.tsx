@@ -372,7 +372,7 @@ function DashboardTabComponent(props: any) {
               </p>
             </div>
             <div style={{ alignSelf: 'center' }}>
-              <img src='group1.png' height='100px' width='100px' />
+              <img src='group2.png' height='100px' width='100px' />
             </div>
           </div>
           <div className='box'>
